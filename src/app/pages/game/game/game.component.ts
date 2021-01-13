@@ -1,7 +1,8 @@
 import { MapType } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GameMap } from 'app/game-map/game-map';
+import { GameMap, MapPoint } from 'app/game-map/game-map';
+import { MoveMap } from 'app/game-map/move-map';
 import gameMap from '../../../game-map/game-map.json';
 
 @Component({
@@ -11,19 +12,19 @@ import gameMap from '../../../game-map/game-map.json';
 })
 export class GameComponent {
 
+  newDirection: MoveMap;
+  currentMapPoint: MapPoint;
   start: boolean;
 
-  _gameMap: GameMap;
+  private _gameMap: GameMap;
 
   constructor(private _router: Router) { 
     this.start = false;
-    // this._gameMap = Object.assign(this._gameMap as , JSON.parse(gameMap));
-    // this.gameMap = gameMap;
-    // const _gmeMap = gameMap as GameMap;
+
     this._gameMap = {} as GameMap;
     Object.assign(this._gameMap, gameMap);
-    console.log('gameMap json: ', gameMap);
-    console.log('gameMap: ', this._gameMap.mapPoints);
+    console.log('this.gameMap: ', this._gameMap.mapPoints);
+    this.currentMapPoint = this._gameMap.mapPoints[0]
   }
 
   startGame() {
@@ -33,8 +34,18 @@ export class GameComponent {
   }
 
   travel(direction: string) {
-    console.log('Direction: ', direction);
-
+    this.currentMapPoint.pathsFromCurrentPosition.find(path => {
+      if (path.direction === direction) {
+        const newDirection: MoveMap = {
+          moveDirection: direction,
+          currentMapPoint: this.currentMapPoint,
+        };
+        this.currentMapPoint = this._gameMap.mapPoints[path.pathPosition];
+        console.log('Direction: ', newDirection);
+        console.log('New path: ', this.currentMapPoint);
+        this.newDirection = newDirection;
+      }
+    })
   }
 
 }
