@@ -1,0 +1,28 @@
+.starting-card {
+    opacity: 2;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s; /* Safari */
+}
+
+.exit {
+    opacity: 0;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s; /* Safari */
+}
+
+.player {
+    height: 300px;
+    font-size: 500px;
+}
+
+.position {
+    height: 230px;
+}
+
+.font-style {
+    font-size: large;
+    font-family: 'EB Garamond', serif;
+    line-height: 32px;;
+}

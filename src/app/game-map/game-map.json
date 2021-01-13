@@ -1,0 +1,40 @@
+{
+    "mapPoints": 
+        [
+            {
+                "currentPosition": 0,
+                "pathsFromCurrentPosition": [
+                    {
+                        "dir": "s",
+                        "newPosition": 1
+                    }
+                ]
+            },
+            {
+                "currentPosition": 1,
+                "pathsFromCurrentPosition": [
+                    {
+                        "dir": "n",
+                        "newPosition": 0
+                    },
+                    {
+                        "dir": "s",
+                        "newPosition": 2
+                    }
+                ]
+            },
+            {
+                "currentPosition": 2,
+                "pathsFromCurrentPosition": [
+                    {
+                        "dir": "n",
+                        "newPosition": 1
+                    },
+                    {
+                        "dir": "e",
+                        "newPosition": 3
+                    }
+                ]
+            }
+        ]
+}

@@ -1,0 +1,92 @@
+<!-- <div class="row">
+  <base-card *ngIf="!start">
+    <base-card-title> - </base-card-title>
+    <base-card-body>
+      <button class="mdl-button mdl-js-button mdl-button--raised color--light-blue" (click)="startGame()">
+        Start Game
+      </button>
+    </base-card-body>
+  </base-card>
+</div> -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+</style>
+
+<div class="row">
+  <div class="row">
+    <!-- <div>
+      <base-card>
+        <base-card-title> WELCOME </base-card-title>
+        <base-card-body>
+          <button class="mdl-button mdl-js-button mdl-button--raised color--light-blue" (click)="startGame()">
+            Enter
+          </button>
+        </base-card-body>
+      </base-card>
+    </div> -->
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+        <base-card>
+          <base-card-title>
+            <h2 class="mdl-card__title-text">Map</h2>
+          </base-card-title>
+          <base-card-body class="font-style">
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone">
+                <div>
+                  <img src="assets/images/the-eagles-landing.png">
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone">
+                <div>
+                  <div [ng-typed]="{speed: 0, timeout: 1000}">You have entered the entrance of the dungeon. You just pass a signboard that reads 'The Eagle's Landing'.</div>
+                </div>
+              </div>
+            </div>
+          </base-card-body>
+        </base-card>
+      </div>
+    </div>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone player">
+        <base-card>
+          <base-card-title>
+            <h2 class="mdl-card__title-text">Player</h2>
+          </base-card-title>
+          <base-card-body class="font-style">
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--8-col-phone">
+                <div>
+                  <div>You are feeling fresh and invigorated. You will also see your emotions here.</div>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--3-col-phone">
+                <div style="font-size: xxx-large; cursor: pointer;">
+                  <div style="text-align: center;" (click)="travel('n')">⇧</div>
+                  <div>
+                    <div style="text-align: left;" (click)="travel('w')">⇦</div>
+                    <div style="text-align: right;" (click)="travel('e')">⇨</div>
+                  </div>
+                  <div style="text-align: center;" (click)="travel('s')">⇩</div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </base-card-body>
+        </base-card>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone position">
+        <base-card>
+          <base-card-title>
+            <h2 class="mdl-card__title-text">Inventory</h2>
+          </base-card-title>
+          <base-card-body class="font-style">
+            <div>Here is the Inventory</div>
+          </base-card-body>
+        </base-card>
+      </div>
+    </div>
+  </div>
+</div>
