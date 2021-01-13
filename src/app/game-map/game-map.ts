@@ -4,10 +4,14 @@ export interface GameMap {
 
 export interface MapPoint {
     currentPosition: number;
-    paths: Path[];
+    x: number;
+    y: number;
+    pathsFromCurrentPosition: Path[];
 }
 
 export interface Path{
     direction: string;
-    newPosition: number
+    pathPosition: number
+    x: number;
+    y: number;
 }

@@ -3,23 +3,33 @@
         [
             {
                 "currentPosition": 0,
+                "x": 0,
+                "y": 0,
                 "pathsFromCurrentPosition": [
                     {
-                        "dir": "s",
-                        "newPosition": 1
+                        "direction": "s",
+                        "pathPosition": 1,
+                        "x": 50,
+                        "y": 100
                     }
                 ]
             },
             {
                 "currentPosition": 1,
+                "x": 50,
+                "y": 100,
                 "pathsFromCurrentPosition": [
                     {
-                        "dir": "n",
-                        "newPosition": 0
+                        "direction": "n",
+                        "pathPosition": 0,
+                        "x": 0,
+                        "y": 0
                     },
                     {
-                        "dir": "s",
-                        "newPosition": 2
+                        "direction": "s",
+                        "pathPosition": 2,
+                        "x": 0,
+                        "y": 0
                     }
                 ]
             },
@@ -27,12 +37,12 @@
                 "currentPosition": 2,
                 "pathsFromCurrentPosition": [
                     {
-                        "dir": "n",
-                        "newPosition": 1
+                        "direction": "n",
+                        "pathPosition": 1
                     },
                     {
-                        "dir": "e",
-                        "newPosition": 3
+                        "direction": "e",
+                        "pathPosition": 3
                     }
                 ]
             }

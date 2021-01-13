@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { ThemeModule } from 'theme';
 import { GameComponent } from './game/game.component';
 import { NgTypedModule } from 'ng-typed';
+import { MapComponentComponent } from './map-component/map-component/map-component.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NgTypedModule } from 'ng-typed';
     NgTypedModule
   ],
   declarations: [
-    GameComponent
+    GameComponent,
+    MapComponentComponent
   ],
 })
 export class GameModule {}
