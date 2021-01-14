@@ -2,8 +2,10 @@ import { MapType } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GameMap, MapPoint } from 'app/game-map/game-map';
+import { MapText } from 'app/game-map/map-text';
 import { MoveMap } from 'app/game-map/move-map';
 import gameMap from '../../../game-map/game-map.json';
+import mapText from '../../../game-map/map-text.json';
 
 @Component({
   selector: 'app-game',
@@ -14,9 +16,11 @@ export class GameComponent {
 
   newDirection: MoveMap;
   currentMapPoint: MapPoint;
+  currentMapText: MapText;
   start: boolean;
 
   private _gameMap: GameMap;
+  private _mapText: MapText[];
 
   constructor(private _router: Router) { 
     this.start = false;
@@ -25,6 +29,11 @@ export class GameComponent {
     Object.assign(this._gameMap, gameMap);
     console.log('this.gameMap: ', this._gameMap.mapPoints);
     this.currentMapPoint = this._gameMap.mapPoints[0]
+
+    this._mapText = {} as MapText[];
+    Object.assign(this._mapText, mapText);
+    this.currentMapText = this._mapText[0];
+    console.log('Current Text: ', this.currentMapText);
   }
 
   startGame() {
@@ -41,9 +50,8 @@ export class GameComponent {
           currentMapPoint: this.currentMapPoint,
         };
         this.currentMapPoint = this._gameMap.mapPoints[path.pathPosition];
-        console.log('Direction: ', newDirection);
-        console.log('New path: ', this.currentMapPoint);
         this.newDirection = newDirection;
+        this.currentMapText = this._mapText[this.currentMapPoint.currentPosition];
       }
     })
   }

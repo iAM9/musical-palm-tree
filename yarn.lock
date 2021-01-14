@@ -127,6 +127,15 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk@10.2.7":
+  version "10.2.7"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-10.2.7.tgz#0ff82eb91b2653ea26909c57a460d4593b44f186"
+  integrity sha512-ZQjDfTRTn7JuAKsf3jiIdU2XBaxxGBi/ZWYv5Pb3HCl6B4PISsIE5VWRhkoUogoAB0MiFHpjnWeIqknJEm11YQ==
+  dependencies:
+    tslib "^2.0.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@10.0.5":
   version "10.0.5"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-10.0.5.tgz#04628246ee6e5428c124ea14656fb1b40f819408"
@@ -211,6 +220,13 @@
   version "10.0.8"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-10.0.8.tgz#2566f5ae48c54134c3f8a22c4f40ac4e2e039436"
   integrity sha512-RO8KjO9yLrVaIxoArLPuO+Q63gNorJ6C8lerLBNIUvpAzf2Pa1wUOZ/Vrt7lBZADC9/FfYfGhIihFBZuZOVmpA==
+
+"@angular/material@10.2.7":
+  version "10.2.7"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-10.2.7.tgz#b84aeeca997dc64fbcc7969540e22434315bab68"
+  integrity sha512-uk6JkRrKHaM9VFMzX7pWC83YNLVgXPB3D8U1yjSOafCdWwrRZgUHGr8MPlSILCr3o2nxgg5SsKdWcWwHuXXUZA==
+  dependencies:
+    tslib "^2.0.0"
 
 "@angular/platform-browser-dynamic@10.0.8":
   version "10.0.8"
@@ -1573,11 +1589,6 @@ alphanum-sort@^1.0.0:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
-
-angular-typing-animation@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/angular-typing-animation/-/angular-typing-animation-0.5.4.tgz#a2eb8b99fca1959926ec665d9a62767717420327"
-  integrity sha512-HY7kdL/RNRcQRBpIVarD1W4SzTTZDZFSfFU/dUdlWwniXya5XTZTCA/jHTVEauQFZp3vdf2ARTWvSS3UJjxN7A==
 
 ansi-colors@4.1.1:
   version "4.1.1"
@@ -5470,6 +5481,11 @@ license-webpack-plugin@2.2.0:
     "@types/webpack-sources" "^0.1.5"
     webpack-sources "^1.2.0"
 
+lightweight-typewriter@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/lightweight-typewriter/-/lightweight-typewriter-2.0.8.tgz#7d41ccea77e22342f626410dd01925435d2f1a97"
+  integrity sha512-hBcszlW7MIiPhOJowBydo3BIWyqLsDsixWFxIBjImj3K2rIU7H3dkjhvm4FydCv9gJzwLJ/qXhQ0FK5Sject0w==
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -6773,6 +6789,11 @@ parse5@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
 
 parseurl@~1.3.2:
   version "1.3.2"

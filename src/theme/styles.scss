@@ -34,3 +34,6 @@
 @import '/components/sidebar/sidebar.component';
 @import '/components/toggle/toggle.component';
 @import '/directives/tooltip/tooltip.component';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

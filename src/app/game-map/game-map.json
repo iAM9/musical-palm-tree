@@ -1,50 +1,87 @@
 {
-    "mapPoints": 
-        [
-            {
-                "currentPosition": 0,
-                "x": 0,
-                "y": 0,
-                "pathsFromCurrentPosition": [
-                    {
-                        "direction": "s",
-                        "pathPosition": 1,
-                        "x": 50,
-                        "y": 100
-                    }
-                ]
-            },
-            {
-                "currentPosition": 1,
-                "x": 50,
-                "y": 100,
-                "pathsFromCurrentPosition": [
-                    {
-                        "direction": "n",
-                        "pathPosition": 0,
-                        "x": 0,
-                        "y": 0
-                    },
-                    {
-                        "direction": "s",
-                        "pathPosition": 2,
-                        "x": 0,
-                        "y": 0
-                    }
-                ]
-            },
-            {
-                "currentPosition": 2,
-                "pathsFromCurrentPosition": [
-                    {
-                        "direction": "n",
-                        "pathPosition": 1
-                    },
-                    {
-                        "direction": "e",
-                        "pathPosition": 3
-                    }
-                ]
-            }
-        ]
+    "mapPoints": [
+        {
+            "currentPosition": 0,
+            "x": 0,
+            "y": 0,
+            "pathsFromCurrentPosition": [
+                {
+                    "direction": "s",
+                    "pathPosition": 1,
+                    "x": 50,
+                    "y": 100
+                }
+            ]
+        },
+        {
+            "currentPosition": 1,
+            "x": 50,
+            "y": 100,
+            "pathsFromCurrentPosition": [
+                {
+                    "direction": "n",
+                    "pathPosition": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "direction": "s",
+                    "pathPosition": 2,
+                    "x": 53,
+                    "y": 210
+                }
+            ]
+        },
+        {
+            "currentPosition": 2,
+            "x": 53,
+            "y": 210,
+            "pathsFromCurrentPosition": [
+                {
+                    "direction": "n",
+                    "pathPosition": 1,
+                    "x": 50,
+                    "y": 100
+                },
+                {
+                    "direction": "s",
+                    "pathPosition": 3,
+                    "x": 30,
+                    "y": 240
+                },
+                {
+                    "direction": "e",
+                    "pathPosition": 4,
+                    "x": 140,
+                    "y": 210
+                }
+            ]
+        },
+        {
+            "currentPosition": 3,
+            "x": 30,
+            "y": 240,
+            "pathsFromCurrentPosition": [
+                {
+                    "direction": "n",
+                    "pathPosition": 2,
+                    "x": 53,
+                    "y": 210
+                }
+            ]
+        },
+        {
+            "currentPosition": 4,
+            "x": 140,
+            "y": 210,
+            "pathsFromCurrentPosition": [
+                {
+                    "direction": "w",
+                    "pathPosition": 2,
+                    "x": 53,
+                    "y": 210
+                }
+            ]
+        }
+    ]
 }

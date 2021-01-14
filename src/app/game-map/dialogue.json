@@ -1,0 +1,9 @@
+{
+    "mapLocation": 3,
+    "dialogue": [
+        { "option": 0, "txt": "The haggard old man looks at you with gray eyes. 'Are you lost?', he \n\\nasks."},
+        { "option": 1, "txt": "'Are you here to help?', he continues."},
+        { "option": 2, "txt": "'Let me help you!', he says. 'Go here and there.'" },
+        { "option": 3, "txt": "'You are here to rob us, aren't you!?', he bellows. 'Begone!!'" }
+    ]
+}
