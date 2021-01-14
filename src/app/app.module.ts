@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './pages/dashboard';
 import { GameModule } from './pages/game/game.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NgTypedModule } from 'ng-typed';
+
+// import { NgTypedModule } from 'ng-typed';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +17,8 @@ import { NgTypedModule } from 'ng-typed';
     AppRoutingModule,
     DashboardModule,
     GameModule,
-    NgTypedModule
+    BrowserAnimationsModule,
+    // NgTypedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

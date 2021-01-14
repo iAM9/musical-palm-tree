@@ -7,8 +7,14 @@
     </div>
     <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone">
         <div>
-            <div [ng-typed]="{speed: 0, timeout: 1000}">You have entered the entrance of the dungeon. You just pass a
-                signboard that reads 'The Eagle's Landing'.</div>
+            <span class="text" id="text">
+                {{this.currentMapText?.text}}
+            </span>
+            <div *ngIf="this.currentMapText?.dialogue?.length">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal" (click)="interact()">
+                    Interact
+                </button>
+            </div>
         </div>
     </div>
 </div>

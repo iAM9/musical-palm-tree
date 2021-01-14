@@ -1,0 +1,32 @@
+[
+    {
+        "mapLocation": 0,
+        "text": "You are near the mouth of the cave. Right beside you is a worn out wooden sign that reads 'The Eagles Landing'.",
+        "dialogue": []
+    },
+    {
+        "mapLocation": 1,
+        "text": "The light from the mouth of the cave fades with each step you take. Before you know, you are in total darkness. You wait until your eyes adjust to the darkness. You find yourself in a large empty area. Weclome to the dungeon!",
+        "dialogue": []
+    },
+    {
+        "mapLocation": 2,
+        "text": "You are now deep into the cave. The pathway splits up into two areas.",
+        "dialogue": []
+    },
+    {
+        "mapLocation": 3,
+        "text": "You see a weary old man there.'Greetings, traveller!', he says. 'What brings you here?'",
+        "dialogue": [
+            { "option": 0, "txt": "'Are you lost?', the haggard old man asks, eyeing you with grey beady eyes."},
+            { "option": 1, "txt": "'Are you here to help?', he continues."},
+            { "option": 2, "txt": "'Let me help you!', he says. 'Go here and there.'" },
+            { "option": 3, "txt": "'You are here to rob us, aren't you!?', he bellows. 'Begone!!'" }
+        ]
+    },
+    {
+        "mapLocation": 4,
+        "text": "You get lost in the corridors.",
+        "dialogue": []
+    }
+]
