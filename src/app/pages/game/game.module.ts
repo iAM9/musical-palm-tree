@@ -8,6 +8,7 @@ import { MapComponentComponent } from './map-component/map-component/map-compone
 import { MapDialogComponent } from './map-component/map-dialog/map-dialog/map-dialog.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
+import { PlayerComponent } from './player-component/player/player.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     ThemeModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    ThemeModule
     // MatDialogModule,
     // MatButtonModule
     // NgTypedModule
@@ -23,7 +25,8 @@ import {MatDialogModule} from '@angular/material/dialog';
   declarations: [
     GameComponent,
     MapComponentComponent,
-    MapDialogComponent
+    MapDialogComponent,
+    PlayerComponent
   ],
 })
 export class GameModule {}

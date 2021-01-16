@@ -1,8 +1,9 @@
+import Character from "./Character";
 import { Emotion } from "./types/emotion";
 import { IEmotion } from "./types/iemotion";
 import { Mood } from "./types/mood";
 
-abstract class Character implements IEmotion {
+class NPC extends Character {
     /** The current mood of the character */
     currentMood: Emotion;
 
@@ -10,17 +11,17 @@ abstract class Character implements IEmotion {
      * Constructor and initialize the mood
      */
     constructor(initialMood: Emotion) {
-        this.currentMood = initialMood;
+        super(initialMood);
     }
     
     /**
      * 
-     * @param stimuli The external stimuli that will update the mood of the characters
+     * @param stimuli The external stimuli that will update the mood of the character
      */
     public personality(stimuli: Emotion): Emotion {
-        console.log('This is the personality mapping function');
-        console.log('Incoming stimuli: ', stimuli);
+        console.log('This is the personality mapping function OF NPC');
+        console.log('Incoming stimuli OF NPC: ', stimuli);
         return this.currentMood;
     }
 }
-export default Character;
+export default NPC;
