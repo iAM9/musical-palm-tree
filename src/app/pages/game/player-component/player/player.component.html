@@ -1,0 +1,67 @@
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone">
+      <base-card id="player">
+        <base-card-title>
+          <h2 class="mdl-card__title-text">Player</h2>
+        </base-card-title>
+        <base-card-body class="font-style">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--8-col-phone">
+              <div>
+                <div>You are feeling fresh and invigorated. You will also see your emotions here.</div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--3-col-phone">
+              <div style="font-size: xxx-large; cursor: pointer;">
+                <div style="text-align: center;" (click)="travel('n')">⇧</div>
+                <div>
+                  <div style="text-align: left;" (click)="travel('w')">⇦</div>
+                  <div style="text-align: right;" (click)="travel('e')">⇨</div>
+                </div>
+                <div style="text-align: center;" (click)="travel('s')">⇩</div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </base-card-body>
+      </base-card>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone mood">
+      <base-card>
+        <base-card-title>
+          <h2 class="mdl-card__title-text">Mood</h2>
+        </base-card-title>
+        <base-card-body class="font-style">
+          <div>Here is the Inventory</div>
+          <ul class="mdl-list pull-left">
+            <li class="mdl-list__item">
+              <div>HAPPINESS</div>
+            </li>
+            <li class="mdl-list__item">
+              <div>FEAR</div>
+            </li>
+            <li class="mdl-list__item">
+              <div>SADNESS</div>
+            </li>
+            <li class="mdl-list__item">
+              <div>ANGER</div>
+            </li>
+          </ul>
+          <ul class="mdl-list pull-left">
+            <li class="mdl-list__item">
+              <base-progress color="orange" [progress]="this.happiness" class="bars">{{this.happiness}}</base-progress>
+            </li>
+            <li class="mdl-list__item">
+              <base-progress color="green" progress={{this.fear}} class="bars"></base-progress>
+            </li>
+            <li class="mdl-list__item">
+              <base-progress color="light-blue" progress={{this.sadness}} class="bars"></base-progress>
+            </li>
+            <li class="mdl-list__item">
+              <base-progress color="red" progress={{this.anger}} class="bars"></base-progress>
+            </li>
+          </ul>
+        </base-card-body>
+      </base-card>
+    </div>
+  </div>

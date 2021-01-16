@@ -7,7 +7,13 @@
     {
         "mapLocation": 1,
         "text": "The light from the mouth of the cave fades with each step you take. Before you know, you are in total darkness. You wait until your eyes adjust to the darkness. You find yourself in a large empty area. Weclome to the dungeon!",
-        "dialogue": []
+        "dialogue": [],
+        "stimuli": {
+            "anger": 0,
+            "fear": 0.7,
+            "happiness": 0.2,
+            "sadness": 0.5
+        }
     },
     {
         "mapLocation": 2,

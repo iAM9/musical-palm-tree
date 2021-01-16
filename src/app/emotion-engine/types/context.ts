@@ -1,6 +1,7 @@
-import { ModuleWithComponentFactories } from "@angular/core";
+import { Emotion } from "./emotion";
+import { Mood } from "./mood";
 
 export interface Context {
-    mood: string;
-    personality(): void;
+    currentMood: Emotion;
+    personality: (stimuli: Emotion) => Emotion;
 }
