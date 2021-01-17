@@ -26,10 +26,10 @@ export class GameComponent {
   currentMapText: MapText;
   start: boolean;
   initialPlayerMood = {
-    anger: 0.7,
-    fear: 0.56,
-    happiness: 0.4,
-    sadness: 0.2
+    anger: 0.0,
+    fear: 0.0,
+    happiness: 0.0,
+    sadness: 0.0
   };
   newPlayerMood = {
     anger: 0.5,
@@ -68,6 +68,15 @@ export class GameComponent {
     console.warn('NPC: ', npc.personality(emotion));
     console.table(['asd', 'asd', 'zxczxc']);
     // console.error('Player: ', this.player.personality(emotion));
+
+    const context: Context = {
+      currentMood: this.player.currentMood,
+      personality: this.player.personality
+      }
+    this._emotionEngineService.affects(context, this.currentMapText.stimuli).subscribe(newMood => {
+      this.player.currentMood = newMood;
+      this.player = new Player(this.player.currentMood);
+    });
   }
 
   startGame() {

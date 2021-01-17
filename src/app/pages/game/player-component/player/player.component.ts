@@ -16,6 +16,7 @@ export class PlayerComponent implements OnInit, OnChanges {
   happiness = 0;
   fear = 0;
   sadness = 0;
+  feel = '';
 
   @Output() travelEvent = new EventEmitter<string>();
 
@@ -62,6 +63,7 @@ export class PlayerComponent implements OnInit, OnChanges {
     document.getElementById('player').style.backgroundColor = this._player.moodColour;
     document.getElementById('player').style.transition = 'background-color 2s ease-in-out';
     this.textAnimation = this._player.textAnimation;
+    this.feel = this._player.moodText;
   }
 
 }

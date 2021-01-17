@@ -4,10 +4,10 @@
         "text": "You are near the mouth of the cave. Right beside you is a worn out wooden sign that reads 'The Eagles Landing'.",
         "dialogue": [],
         "stimuli": {
-            "anger": 0.1,
-            "fear": 0.2,
-            "happiness": 0.8,
-            "sadness": 0.3
+            "anger": 0.0,
+            "fear": 0.5,
+            "happiness": 0.4,
+            "sadness": 0.0
         }
     },
     {
@@ -16,25 +16,37 @@
         "dialogue": [],
         "stimuli": {
             "anger": 0,
-            "fear": 0.7,
-            "happiness": 0.2,
+            "fear": 0,
+            "happiness": 1,
             "sadness": 0.5
         }
     },
     {
         "mapLocation": 2,
         "text": "You are now deep into the cave. The pathway splits up into two areas.",
-        "dialogue": []
+        "dialogue": [],
+        "stimuli": {
+            "anger": 0.0,
+            "fear": 0.7,
+            "happiness": 0,
+            "sadness": 0.5
+        }
     },
     {
         "mapLocation": 3,
-        "text": "You see a weary old man there.'Greetings, traveller!', he says. 'What brings you here?'",
+        "text": "You see a TERRIFIED weary old man there.'Greetings, traveller!', he says. 'What brings you here?'",
         "dialogue": [
             { "option": 0, "txt": "'Are you lost?', the haggard old man asks, eyeing you with grey beady eyes."},
             { "option": 1, "txt": "'Are you here to help?', he continues."},
             { "option": 2, "txt": "'Let me help you!', he says. 'Go here and there.'" },
             { "option": 3, "txt": "'You are here to rob us, aren't you!?', he bellows. 'Begone!!'" }
-        ]
+        ],
+        "stimuli": {
+            "anger": 0,
+            "fear": 1,
+            "happiness": 0,
+            "sadness": 0
+        }
     },
     {
         "mapLocation": 4,

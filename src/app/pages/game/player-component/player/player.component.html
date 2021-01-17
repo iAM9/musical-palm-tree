@@ -1,3 +1,5 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet"> 
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--6-col-phone">
       <base-card id="player">
@@ -8,7 +10,12 @@
           <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--8-col-phone">
               <div>
-                <div [class]="textAnimation">You are feeling fresh and invigorated. You will also see your emotions here.</div>
+                <div>
+                  You are feeling
+                  <div [class]="textAnimation" class="font-feel">
+                    {{feel}}
+                  </div>
+                </div>
               </div>
             </div>
             <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--3-col-phone">
