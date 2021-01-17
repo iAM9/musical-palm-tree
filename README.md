@@ -1,4 +1,4 @@
-# MUSICAL PALM TREE
+# MUSICAL PALM TREE 🌴🎮 
 
 A prototype for game that uses an emotion engine using Angular.
 
