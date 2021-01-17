@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import Character from 'app/emotion-engine/Character';
 import { EmotionEngineService } from 'app/emotion-engine/emotion-engine.service';
 import NPC from 'app/emotion-engine/NPC';
-import Player from 'app/emotion-engine/Player';
+import { Player } from 'app/emotion-engine/Player';
+
 import { Context } from 'app/emotion-engine/types/context';
 import { Emotion } from 'app/emotion-engine/types/emotion';
 import { GameMap, MapPoint } from 'app/game-map/game-map';
@@ -65,6 +66,7 @@ export class GameComponent {
     };
     const npc = new NPC(emotion);
     console.warn('NPC: ', npc.personality(emotion));
+    console.table(['asd', 'asd', 'zxczxc']);
     // console.error('Player: ', this.player.personality(emotion));
   }
 
@@ -88,7 +90,7 @@ export class GameComponent {
           currentMood: this.player.currentMood,
           personality: this.player.personality
           }
-        this._emotionEngineService.affects(context, this.newPlayerMood).subscribe(newMood => {
+        this._emotionEngineService.affects(context, this.currentMapText.stimuli).subscribe(newMood => {
           this.player.currentMood = newMood;
           this.player = new Player(this.player.currentMood);
         });

@@ -2,7 +2,13 @@
     {
         "mapLocation": 0,
         "text": "You are near the mouth of the cave. Right beside you is a worn out wooden sign that reads 'The Eagles Landing'.",
-        "dialogue": []
+        "dialogue": [],
+        "stimuli": {
+            "anger": 0.1,
+            "fear": 0.2,
+            "happiness": 0.8,
+            "sadness": 0.3
+        }
     },
     {
         "mapLocation": 1,

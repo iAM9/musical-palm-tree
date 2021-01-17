@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
-import Player from 'app/emotion-engine/Player';
+import { Player } from 'app/emotion-engine/Player';
 
 
 @Component({
@@ -11,6 +11,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
 
   private _player: Player;
+  textAnimation = '';
   anger = 0;
   happiness = 0;
   fear = 0;
@@ -25,7 +26,7 @@ export class PlayerComponent implements OnInit, OnChanges {
     }
     this._player = player;
     this.setBars();
-    this.setColour();
+    this.setVisuals();
   }
 
   get player(): Player {
@@ -37,7 +38,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void {
     this.setBars;
-    this.setColour();
+    this.setVisuals();
   }
 
   ngOnInit(): void {
@@ -56,31 +57,11 @@ export class PlayerComponent implements OnInit, OnChanges {
     console.warn('PLayer currentMood: ', this.player.currentMood);
   }
 
-  setColour() {
-    console.log('Player currentMood: ', this._player.currentMood);
-    const maxColourAmt = Math.max(
-      this._player.currentMood.anger,
-      this._player.currentMood.fear,
-      this._player.currentMood.happiness,
-      this._player.currentMood.sadness,
-      );
-    
-    if (maxColourAmt === this._player.currentMood.anger) {
-      document.getElementById('player').style.backgroundColor = 'firebrick';
-      document.getElementById('player').style.transition = 'background-color 2s ease-in-out';
-    } 
-    if (maxColourAmt === this._player.currentMood.happiness) {
-      document.getElementById('player').style.backgroundColor = 'orange';
-      document.getElementById('player').style.transition = 'background-color 2s ease-in-out';
-    } 
-    if (maxColourAmt === this._player.currentMood.sadness) {
-      document.getElementById('player').style.backgroundColor = 'teal';
-      document.getElementById('player').style.transition = 'background-color 2s ease-in-out';
-    } 
-    if (maxColourAmt === this._player.currentMood.fear) {
-      document.getElementById('player').style.backgroundColor = 'darkgreen';
-      document.getElementById('player').style.transition = 'background-color 2s ease-in-out';
-    }  
+  setVisuals() {
+    console.log('Player currentMood: ', this._player.moodColour);
+    document.getElementById('player').style.backgroundColor = this._player.moodColour;
+    document.getElementById('player').style.transition = 'background-color 2s ease-in-out';
+    this.textAnimation = this._player.textAnimation;
   }
 
 }
