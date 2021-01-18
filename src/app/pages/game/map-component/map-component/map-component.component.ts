@@ -14,11 +14,17 @@ import NPC from 'app/emotion-engine/NPC';
   templateUrl: './map-component.component.html',
   styleUrls: ['./map-component.component.scss']
 })
-export class MapComponentComponent implements OnInit {
+export class MapComponentComponent {
+  /** The current map text */
   private _currentMapText: MapText;
 
+  /** Even emitter for the current emotional stimuli of conversation held with the NPC */
   @Output() npcEmotion = new EventEmitter<Dialogue>();
 
+  /** The current NPC being interacted with */
+  @Input() npc: NPC;
+
+  /** Set the new direction of the plater */
   @Input() set newDirection(newDir: MoveMap) {
     if (!newDir) {
       movePlayerDot(-200, -200, 0, 0);
@@ -32,6 +38,7 @@ export class MapComponentComponent implements OnInit {
     });
   }
 
+  /** Sets the current map text */
   @Input() set currentMapText(mapText: MapText) {
     console.log('Text: ', mapText.text);
     if (!mapText || !mapText.text) {
@@ -41,15 +48,15 @@ export class MapComponentComponent implements OnInit {
     this._currentMapText = mapText;
   }
 
+  /** Gets the curret map text */
   get currentMapText(): MapText {
     return this._currentMapText;
   }
 
-  @Input() npc: NPC;
-
+  /**
+   * The dialog ref 
+    */
   constructor(private _dialogRef: MatDialog) { }
-
-  ngOnInit(): void { }
 
   /**
    * Interact with the player and NPC
@@ -98,6 +105,9 @@ export class MapComponentComponent implements OnInit {
 
 }
 
+//////////////////////////////////////
+/****  HELPER FUNCTION FOR VISUALS */
+//////////////////////////////////////
 function fadeOutText() {
   document.getElementById('text').animate([
     { opacity: 0 },

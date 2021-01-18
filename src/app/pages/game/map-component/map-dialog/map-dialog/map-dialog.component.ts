@@ -9,17 +9,23 @@ import { Dialogue } from 'app/game-map/map-text';
   templateUrl: './map-dialog.component.html',
   styleUrls: ['./map-dialog.component.scss']
 })
-export class MapDialogComponent implements OnInit {
+export class MapDialogComponent {
 
+  /** The set of Dialogus and the current dialogue */
   dialogue: Dialogue[];
   currentDialogue: Dialogue;
 
+  /** The current NPC character being interacted with */
   npc: NPC;
 
+  /** Flag to check if interaction has been completed or not */
   answered = false;
 
-  // @Output() currentDialogueEmotion = new EventEmitter<Dialogue>();
-
+  /**
+   * 
+   * @param _dialogRef The ref to the current dialog component
+   * @param data Injected data from the parent component
+   */
   constructor(
     private _dialogRef: MatDialogRef<MapDialogComponent>,
     @Inject(MAT_DIALOG_DATA)
@@ -33,8 +39,6 @@ export class MapDialogComponent implements OnInit {
     console.log('Dialogues: ', this.dialogue);
     console.log('NPC: ', this.npc);
   }
-
-  ngOnInit(): void { }
 
   /**
    * Handle the interaction between the player and npc
@@ -52,6 +56,9 @@ export class MapDialogComponent implements OnInit {
     // this.currentDialogueEmotion.emit(this.currentDialogue);
   }
 
+  /**
+   * Ends the interaction with the NPC by closing the dialog box and returning the last conversation held
+   */
   endConversation(): void {
     this._dialogRef.close(this.currentDialogue);
   }

@@ -16,8 +16,6 @@ abstract class Character implements IEmotion {
         this.currentMood = initialMood;
     }
 
-    
-    
     /**
      * 
      * @param stimuli The external stimuli that will update the mood of the characters

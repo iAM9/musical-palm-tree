@@ -13,8 +13,8 @@ export class EmotionEngineService {
 
   /**
    * 
-   * @param context 
-   * @param newStimuli 
+   * @param context The current mood and the personality mapping function of the object
+   * @param newStimuli Incoming affective emotional stimuli
    */
   affects(context: Context, newStimuli: Emotion): Observable<Emotion> {
     console.log('Context: ', context);

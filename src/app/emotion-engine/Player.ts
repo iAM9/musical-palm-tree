@@ -13,13 +13,26 @@ export class Player extends Character {
 
     moodText: string;
 
+    constructor();
+    constructor(initialMood: Emotion);
+
     /**
      * Constructor and initialize the mood
      */
-    constructor(initialMood: Emotion) {
-        super(initialMood);
-        this.currentMood = initialMood;
-
+    constructor(initialMood?: Emotion) {
+        if (initialMood) {
+            super(initialMood);
+            this.currentMood = initialMood
+        } else {
+            const mood = {
+                anger: 0.0,
+                fear: 0.0,
+                happiness: 0.0,
+                sadness: 0.0
+            };
+            super(mood);
+            this.currentMood = mood;
+        }
         Player._setPlayerVisualAttributes(this);
     }
 

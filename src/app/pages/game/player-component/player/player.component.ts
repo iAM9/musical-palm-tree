@@ -7,10 +7,12 @@ import { Player } from 'app/emotion-engine/Player';
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.scss']
 })
-export class PlayerComponent implements OnInit, OnChanges {
+export class PlayerComponent implements OnChanges {
 
-
+  /** The player character */
   private _player: Player;
+
+  /** Initialize attributes for visual components */
   textAnimation = '';
   anger = 0;
   happiness = 0;
@@ -18,8 +20,12 @@ export class PlayerComponent implements OnInit, OnChanges {
   sadness = 0;
   feel = '';
 
+  /** Event emitter for travel events */
   @Output() travelEvent = new EventEmitter<string>();
 
+  /**
+   * Set the current Player character
+   */
   @Input() set player(player: Player) {
     if (!player) {
       this._player = null;
@@ -30,25 +36,36 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.setVisuals();
   }
 
+  /**
+   * Gets the curret player character
+   */
   get player(): Player {
     return this._player;
   }
 
-  constructor() {
-  }
+  /** Constructor */
+  constructor() {  }
 
+  /**
+   * Detects changes
+   */
   ngOnChanges(): void {
     this.setBars;
     this.setVisuals();
   }
 
-  ngOnInit(): void {
-  }
 
+  /**
+   * Emits the new travel direction
+   * @param direction New direction to travel
+   */
   travel(direction: string) {
     this.travelEvent.emit(direction);
   }
 
+  /**
+   * Sets the progress-bar values in the progress components
+   */
   setBars() {
     console.error('Setting bars');
     this.anger = this._player.currentMood.anger * 100;
@@ -58,6 +75,9 @@ export class PlayerComponent implements OnInit, OnChanges {
     console.warn('PLayer currentMood: ', this.player.currentMood);
   }
 
+  /**
+   * Sets the colour and the text-shake animation in the Player's visual components
+   */
   setVisuals() {
     console.log('Player currentMood: ', this._player.moodColour);
     document.getElementById('player').style.backgroundColor = this._player.moodColour;
