@@ -10,4 +10,5 @@ export interface MapText {
 export interface Dialogue {
     option: number;
     txt: string;
+    stimuli: Emotion;
 }

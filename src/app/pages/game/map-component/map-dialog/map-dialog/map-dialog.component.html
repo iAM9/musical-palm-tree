@@ -3,7 +3,15 @@
     <div>{{this.currentDialogue?.txt}}</div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal" (click)="no()">No</button>
-    <div></div>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal" (click)="yes()" cdkFocusInitial>Yes</button>
+    <span *ngIf="!answered">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal"
+            (click)="answer(false)">No</button>
+        <div></div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal"
+            (click)="answer(true)">Yes</button>
+    </span>
+    <div *ngIf="answered">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal"
+            (click)="endConversation()">End</button>
+    </div>
 </mat-dialog-actions>

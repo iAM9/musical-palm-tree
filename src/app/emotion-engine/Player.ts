@@ -92,7 +92,7 @@ export class Player extends Character {
         }
 
         if (stimuli.anger >= 0.5) {
-            player.currentMood.happiness += 0.2;
+            player.currentMood.happiness += 0.3;
             player.currentMood.anger += 0.05;
             player.currentMood.fear -= 0.1;
             player.currentMood.sadness -= 0.1;

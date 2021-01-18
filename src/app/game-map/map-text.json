@@ -36,14 +36,40 @@
         "mapLocation": 3,
         "text": "You see a TERRIFIED weary old man there.'Greetings, traveller!', he says. 'What brings you here?'",
         "dialogue": [
-            { "option": 0, "txt": "'Are you lost?', the haggard old man asks, eyeing you with grey beady eyes."},
-            { "option": 1, "txt": "'Are you here to help?', he continues."},
-            { "option": 2, "txt": "'Let me help you!', he says. 'Go here and there.'" },
-            { "option": 3, "txt": "'You are here to rob us, aren't you!?', he bellows. 'Begone!!'" }
+            {
+                "option": 0,
+                "txt": "'Are you here to help?', the haggard old man asks, eyeing you with grey beady eyes.",
+                "stimuli": {
+                    "anger": 0,
+                    "fear": 0,
+                    "happiness": 0,
+                    "sadness": 0
+                }
+            },
+            {
+                "option": 1,
+                "txt": "'Let me help you!', he says. 'Go here and there.'",
+                "stimuli": {
+                    "anger": 0,
+                    "fear": 0,
+                    "happiness": 1,
+                    "sadness": 0
+                }
+            },
+            {
+                "option": 2,
+                "txt": "'You are here to rob us, aren't you!?', he bellows. 'Begone!!'",
+                "stimuli": {
+                    "anger": 1,
+                    "fear": 0,
+                    "happiness": 0,
+                    "sadness": 0
+                }
+            }
         ],
         "stimuli": {
             "anger": 0,
-            "fear": 1,
+            "fear": 0,
             "happiness": 0,
             "sadness": 0
         }

@@ -1,11 +1,11 @@
 .dot {
     height: 25px;
     width: 25px;
-    background-color: crimson;
+    background-color: lightslategray;
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    left: 59px;
+    left: 82px;
     bottom: 109px;
     // animation: shimmy 3s forwards;
   }
@@ -21,4 +21,17 @@
 
 .text {
   
+}
+
+
+.npc-dot {
+	height: 25px;
+	width: 25px;
+	background-color: chocolate;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	left: 88px;
+	top: 127px;
+	opacity: 0.7;
 }

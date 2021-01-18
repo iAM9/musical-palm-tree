@@ -6,12 +6,17 @@ abstract class Character implements IEmotion {
     /** The current mood of the character */
     currentMood: Emotion;
 
+    constructor();
+    constructor(intialMood: Emotion);
+
     /**
      * Constructor and initialize the mood
      */
-    constructor(initialMood: Emotion) {
+    constructor(initialMood?: Emotion) {
         this.currentMood = initialMood;
     }
+
+    
     
     /**
      * 

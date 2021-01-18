@@ -22,7 +22,11 @@
             <h2 class="mdl-card__title-text">Map</h2>
           </base-card-title>
           <base-card-body class="font-style">
-            <app-map-component [newDirection]="newDirection" [currentMapText]="currentMapText">
+            <app-map-component
+              [newDirection]="newDirection"
+              [currentMapText]="currentMapText"
+              [npc]="npc"
+              (npcEmotion)="npcEmotion($event)">
             </app-map-component>
           </base-card-body>
         </base-card>
