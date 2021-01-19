@@ -1,3 +1,7 @@
+/**
+ * The defaul interface for the Game Map
+ */
+
 export interface GameMap {
     mapPoints: MapPoint[];
 }

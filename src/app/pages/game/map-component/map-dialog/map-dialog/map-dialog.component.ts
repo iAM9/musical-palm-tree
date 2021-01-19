@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import NPC from 'app/emotion-engine/NPC';
 import { Dialogue } from 'app/game-map/map-text';
 
@@ -31,12 +31,14 @@ export class MapDialogComponent {
     @Inject(MAT_DIALOG_DATA)
     public data: {
       dialogue: Dialogue[],
-      npc: NPC
+      npc: NPC,
     }) {
     this.dialogue = data.dialogue;
     this.currentDialogue = this.dialogue[0];
     this.npc = data.npc;
+    // tslint:disable-next-line: no-console
     console.log('Dialogues: ', this.dialogue);
+    // tslint:disable-next-line: no-console
     console.log('NPC: ', this.npc);
   }
 

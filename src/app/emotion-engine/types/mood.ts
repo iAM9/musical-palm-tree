@@ -1,5 +1,6 @@
-import { Emotion } from "./emotion";
+import { Emotion } from './emotion';
 
+// tslint:disable-next-line: interface-name
 export interface Mood {
-    emotion: Emotion;
+  emotion: Emotion;
 }

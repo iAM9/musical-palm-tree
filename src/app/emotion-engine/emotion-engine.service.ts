@@ -5,7 +5,7 @@ import { Context } from './types/context';
 import { Emotion } from './types/emotion';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EmotionEngineService {
 
@@ -17,7 +17,9 @@ export class EmotionEngineService {
    * @param newStimuli Incoming affective emotional stimuli
    */
   affects(context: Context, newStimuli: Emotion): Observable<Emotion> {
+    // tslint:disable-next-line: no-console
     console.log('Context: ', context);
+    // tslint:disable-next-line: no-console
     console.log('newEmotion: ', newStimuli);
     const emotion = context.personality(newStimuli);
     return of(emotion);

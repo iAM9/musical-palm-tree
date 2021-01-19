@@ -16,7 +16,7 @@ import { GameComponent } from './pages/game/game/game.component';
           component: CommonLayoutComponent,
           children: [
             { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
-            { path: 'game', component: GameComponent, pathMatch: 'full' }
+            { path: 'game', component: GameComponent, pathMatch: 'full' },
           ],
         },
         { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
