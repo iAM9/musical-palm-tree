@@ -1,7 +1,7 @@
 [
     {
         "mapLocation": 0,
-        "text": "You are near the mouth of the cave. Right beside you is a worn out wooden sign that reads 'The Eagles Landing'.",
+        "text": "You are near the mouth of the cave. Right beside you is a worn out wooden sign that reads 'The Eagles Landing'. Darkness emits from inside",
         "dialogue": [],
         "stimuli": {
             "anger": 0.0,
@@ -12,7 +12,7 @@
     },
     {
         "mapLocation": 1,
-        "text": "The light from the mouth of the cave fades with each step you take. Before you know, you are in total darkness. You wait until your eyes adjust to the darkness. You find yourself in a large empty area. Weclome to the dungeon!",
+        "text": "The light from the mouth of the cave fades with each step you take. Before you know, you are in total darkness. You wait until your eyes adjust to the darkness. and you see COLOURS, RAINBOWS, FLUFFY BUNNIES. It's EUPHORIA!",
         "dialogue": [],
         "stimuli": {
             "anger": 0,
@@ -29,7 +29,7 @@
             "anger": 0.0,
             "fear": 0.7,
             "happiness": 0,
-            "sadness": 0.5
+            "sadness": 0.2
         }
     },
     {
